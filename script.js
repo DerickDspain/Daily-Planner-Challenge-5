@@ -1,6 +1,14 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+const el = document.getElementById('currentDay');
+const current = new Date();
+const day = current.getDate();
+const month = current.getMonth() + 1;
+const year = current.getFullYear();
+const currentDay = `${month}/${day}/${year}`;
+el.textContent = currentDay;
+
 $(document).ready(function(){
   $('.saveBtn').on('click', function(){
     console.log();
@@ -18,7 +26,8 @@ $(document).ready(function(){
       } else {
         $(this).addclass('future');
       }
-    });
+          });
+      });
   });
 
   
