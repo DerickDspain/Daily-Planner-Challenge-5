@@ -9,7 +9,16 @@ $(document).ready(function(){
     localStorage.setItem(time,plans);
     let plansBlank = ['','','','','','','','','','',];
     
-    
+    $(time).each(function(){
+      let timeHour = parseInt($(this).attr('id').split('-')[1]);
+      if (timeHour < currentHour) {
+        $(this).addclass('past')
+      } else if (timeHour == currentHour){
+        $(this).addclass('present');
+      } else {
+        $(this).addclass('future');
+      }
+    });
   });
 
   
