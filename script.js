@@ -2,37 +2,31 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(document).ready(function(){
-  $('.saveBtn').on('click', function(e){
-    console.log(e);
+  $('.saveBtn').on('click', function(){
+    console.log();
     let time = $(this).siblings('.description').val();
     let plans = $(this).parent().attr('id');
     localStorage.setItem(time,plans);
-  })
+    let plansBlank = ['','','','','','','','','','',];
+    
+    
+  });
 
-});
-
-
-const workHour = ['9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm',];
   
-  
-  
-  
-
 
   
   
   
   
+
+
   
   
   
-  const el = document.getElementById('currentDay');
-  const current = new Date();
-  const day = current.getDate();
-  const month = current.getMonth() + 1;
-  const year = current.getFullYear();
-  const currentDay = `${month}/${day}/${year}`;
-  el.textContent = currentDay;
+  
+  
+  
+  
   
   
   
@@ -52,26 +46,6 @@ const workHour = ['9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm'
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //let plans = ['','','','','','','','','','',];
-  //function renderWorkHour() {
-    //$('.container').empty();
-      //for (let i = 0; i < workHour.length; i++) {
-        //const d = new Date();
-        //let plansContent = plans[i];
-        //let hour = workHour[i].hour;
-        //let time = d.getTime();
-        //let thisHour = workHour[i].time;
-        //let inputElStyle = '';
 
-        //if (thisHour < hour) {
-          //inputElStyle = 'past';
-        //} else {
-          //inputElStyle = 'future';
-        //}
-      //if (thisHour === hour) {
-        //inputElStyle = 'present';
-      //}
-
-      //let workHourEl = $('')
 
 // TODO: Add code to display the current date in the header of the page.
